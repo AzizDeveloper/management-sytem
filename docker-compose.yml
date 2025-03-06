@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:17.0
+    restart: always
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: azizdev
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: task_db
+    ports:
+      - 5433:5432
