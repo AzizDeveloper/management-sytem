@@ -1,6 +1,5 @@
 package dev.aziz.controllers;
 
-import dev.aziz.dtos.CommentDto;
 import dev.aziz.dtos.TaskDto;
 import dev.aziz.entities.Comment;
 import dev.aziz.entities.Task;
@@ -56,7 +55,7 @@ public class TaskController {
     )
     @GetMapping("/tasks/{id}")
     public ResponseEntity<TaskDto> getOneTask(@PathVariable Long id) {
-        return ResponseEntity.ok(taskService.getOneTask(id));
+        return ResponseEntity.ok(taskService.getTaskById(id));
     }
 
     @Operation(

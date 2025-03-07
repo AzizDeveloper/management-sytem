@@ -30,7 +30,7 @@ public class TaskService {
         return taskRepository.findAllByPageRequest(id, pageRequest);
     }
 
-    public TaskDto getOneTask(Long id) {
+    public TaskDto getTaskById(Long id) {
         return taskMapper.taskToTaskDto(taskRepository.findById(id)
                 .orElseThrow(() -> new AppException("Task not found.", HttpStatus.NOT_FOUND)));
     }
